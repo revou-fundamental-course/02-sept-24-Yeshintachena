@@ -2,24 +2,122 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=  , initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="02-sept-24-Yeshintachena\css\styles.css">
+    <title>Website Kalkulator Matematik</title>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
 </head>
-
-<body>
-    <header class="main-header">
-        <h1>welcome to katik</h1>
-        <p>hello everyone welcome to katik :)</p>
-    </header>
-    <main>
-        <section>
-            <button href="#">segitiga</button>
-            <button href="#">jajar genjang</button>
-        </section>
-
-        <section></section>
-    </main>
-    
-</body>
+        
+    <body>
+        <!-- Header Website -->
+        <header class="main-header">
+            <h1>Website Kalkulator Matematik</h1>
+            <p>Hello everyone, welcome to katik ^^</p>
+            <p>Web sederhana ini dapat membantu kamu menghitung nilai luas dan keliling bangun datar</p>
+        </header>
+        
+        <!-- Konten Utama -->
+            <main>
+                <!-- Tombol Pilihan Bangun Datar -->
+                <section class="selection-content">
+                    <button type="button" onclick="tryDOM()" class="selection-btn firebrick-color" id="segitiga-btn"> Luas</button>
+                    <button type="button" onclick="tryDOM()" class="selection-btn firebrick-color" id="jajar-genjang-btn"> Keliling </button>
+                </section>
+        
+                <!-- Konten Utama untuk Luas dan Keliling Segitiga -->
+                <section class="main-content">
+                    <!-- Perhitungan Luas Segitiga -->
+                    <aside>
+                        <header>
+                            <h1 class="luas-segitiga-header">Luas Segitiga</h1>
+                        </header>
+        
+                        <article class="luas-segitiga-content">
+                            <div class="luas-segitiga-img"></div>
+                            <div class="Rumus" id="rumus">
+                                <!-- Rumus Luas Segitiga -->
+                                Rumus Luas Segitiga:
+                                <span class="center-text">L = 1/2 x a x t</span>
+                                Di mana :<br>
+                                L = Luas<br>
+                                a = Panjang Alas<br>
+                                t = Tinggi
+                            </div>
+                        </article>
+        
+                        <hr />
+        
+                        <!-- Form Perhitungan Luas Segitiga -->
+                        <form>
+                            <header>
+                                <h1 class="luas-segitiga-form-header">Hitung Luas Segitiga</h1>
+                            </header>
+        
+                            <div class="input-wrapper">
+                                <label for="panjang-alas">Panjang Alas:</label>
+                                <input id="panjang-alas" name="panjang-alas" type="number" />
+                            </div>
+                            <div class="input-wrapper">
+                                <label for="tinggi">Tinggi:</label>
+                                <input id="tinggi" name="tinggi" type="number" />
+                            </div>
+        
+                            <p id="result">Hasil Perhitungan</p>
+                            <button type="button" onclick="hitungLuas()">Hitung</button>
+                            <button type="reset">Reset</button>
+                        </form>
+                    </aside>
+        
+                    <!-- Perhitungan Keliling Segitiga -->
+                    <aside>
+                        <header>
+                            <h1 class="luas-segitiga-header">Keliling Segitiga</h1>
+                        </header>
+        
+                        <article class="luas-segitiga-content">
+                            <div class="luas-segitiga-img"></div>
+                            <div class="Rumus" id="rumus">
+                                <!-- Rumus Keliling Segitiga -->
+                                Rumus Keliling Segitiga:
+                                <span class="center-text">K = s1 + s2 + a</span>
+                                Di mana:<br>
+                                K = Keliling<br>
+                                s1 = sisi pertama<br>
+                                s2 = sisi kedua<br>
+                                a = alas
+                            </div>
+                        </article>
+        
+                        <hr />
+        
+                        <!-- Form Perhitungan Keliling Segitiga -->
+                        <form>
+                            <header>
+                                <h1 class="luas-segitiga-form-header">Hitung Keliling Segitiga</h1>
+                            </header>
+        
+                            <div class="input-wrapper">
+                                <label for="inputs1">Sisi 1:</label>
+                                <input id="inputs1" type="number" />
+                            </div>
+                            <div class="input-wrapper">
+                                <label for="inputs2">Sisi 2:</label>
+                                <input id="inputs2" type="number" />
+                            </div>
+                            <div class="input-wrapper">
+                                <label for="inputs3">Alas:</label>
+                                <input id="inputs3" type="number" />
+                            </div>
+        
+                            <p id="keliling-result">Hasil Perhitungan:</p>
+                            <p id="error1" class="error-message"></p>
+                            <button type="button" onclick="hitungKeliling()">Hitung</button>
+                            <button type="reset">Reset</button>
+                        </form>
+                    </aside>
+                </section>
+            </main>
+        
+            <!-- Script Javascript -->
+            <script src="./js/script.js"></script>
+        </body>  
 </html>
+        

@@ -1,4 +1,136 @@
 
+/* Mengatur gaya header utama */
 .main-header {
-    text-align: center;
+    font-size: larger; 
+    font-family: cursive; 
+    text-align: center; 
+}
+
+/* Mengatur layout untuk bagian tombol pilihan */
+.selection-content {
+    display: flex; 
+    flex-direction: column; /* Mengatur arah flex menjadi kolom */
+}
+
+/* Gaya umum untuk tombol pilihan */
+.selection-btn {
+    font-family: cursive; 
+    color: white; 
+    text-align: center; 
+    height: 40px; 
+    border-radius: 10px; 
+    padding: 15px 25px; 
+    font-size: 16px; 
+    cursor: pointer; /* Menampilkan kursor pointer saat di-hover */
+    transition: transform 0.2s, box-shadow 0.2s; /* Efek transisi untuk transformasi dan bayangan */
+    margin: 10px; /* Jarak luar tombol */
+}
+
+/* Efek hover untuk tombol */
+.selection-btn:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Bayangan saat di-hover */
+    transform: translateY(-2px); /* Menggeser tombol sedikit ke atas */
+}
+
+/* Warna latar belakang untuk tombol firebrick */
+.firebrick-color {
+    background-color: firebrick; 
+    color: floralwhite;
+}
+
+/* Mengatur gaya untuk header di bagian Luas Segitiga */
+.luas-segitiga-header {
+    font-size: x-large; 
+    font-family: cursive;
+    color: white; 
+    padding-top: 32px; 
+    padding-bottom: 32px; 
+    margin: 0px;
+    background: firebrick; 
+    text-align: center; 
+}
+
+/* Mengatur layout konten untuk luas segitiga */
+.luas-segitiga-content {
+    display: flex; /* Menggunakan flexbox untuk tata letak */
+    flex-direction: column; /* Kolom sebagai arah tata letak */
+    font-family: cursive; 
+
+/* Menampilkan teks di tengah dan menebalkan font */
+.center-text {
+    display: block; 
+    text-align: center; 
+    font-weight: bold; 
+}
+
+/* Mengatur gambar di dalam luas segitiga */
+.luas-segitiga-img {
+    height: 300px; 
+    width: 300px; 
+    background-image: url("https://asset.kompas.com/crops/ZwOr6ZrEtAtid5uZmYhDFijYPa4=/175x161:1573x1094/750x500/data/photo/2022/03/09/62288763c6d64.png"); 
+    background-size: cover; 
+    background-position: center; 
+    align-self: center; 
+}
+
+/* Gaya untuk header form luas segitiga */
+.luas-segitiga-form-header {
+    font-family: cursive; 
+    text-align: center; 
+}
+
+/* Layout container */
+.container{
+    display: flex; /* Menggunakan flexbox untuk tata letak */
+}
+
+/* Mengatur layout input */
+.input-wrapper {
+    font-family: cursive; 
+    display: flex; 
+    justify-content: space-between; /* Mengatur jarak antara label dan input */
+    align-items: center; 
+}
+
+/* Mengatur input di dalam wrapper */
+.input-wrapper >input {
+    font-family: cursive; 
+    width: 300px; 
+}
+
+/* input dengan tipe number */
+.input[type=number] {
+    width: 200px; 
+    font-family: cursive; 
+    padding: 12px 20px; 
+    margin: 8px 0; 
+    display: inline-block; 
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    box-sizing: border-box; 
+}
+
+/* Layout konten utama */
+.main-content {
+    font-family: cursive; 
+    display: flex; 
+}
+
+/* Flexibilitas untuk elemen aside */
+.main-content>aside {
+    flex: 1; /* Membuat elemen aside menyesuaikan ukuran */
+}
+
+/* Gaya untuk pesan kesalahan */
+.error-message {
+    color: red; 
+    font-weight: bold; 
+    margin-top: 10px; /* Jarak atas untuk pesan kesalahan */
+} 
+
+@media only screen and (max-width: 480px) {
+    .main-content {
+        flex-direction: column; 
+    }
+}
 }
